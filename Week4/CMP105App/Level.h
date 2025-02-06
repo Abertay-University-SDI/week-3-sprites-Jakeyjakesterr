@@ -20,6 +20,7 @@ public:
 private:
 	// Level objects
 	GameObject testSprite;
+	GameObject Goomba;
 	sf::Texture texture;
 
 };

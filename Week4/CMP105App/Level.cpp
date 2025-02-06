@@ -12,6 +12,13 @@ Level::Level(sf::RenderWindow* hwnd, Input* in)
 	testSprite.setSize(sf::Vector2f(100, 100));
 	testSprite.setPosition(100, 100);
 
+	texture.loadFromFile("gfx/Goomba.png");
+
+	Goomba.setTexture(&texture);
+	Goomba.setSize(sf::Vector2f(100, 100));
+	Goomba.setPosition(500, 500);
+
+
 }
 
 Level::~Level()
@@ -28,6 +35,7 @@ void Level::handleInput(float dt)
 		window->close();
 	}
 
+
 }
 
 // Update game objects
@@ -42,6 +50,7 @@ void Level::render()
 	beginDraw();
 
 	window->draw(testSprite);
+	window->draw(Goomba);
 
 	endDraw();
 }
